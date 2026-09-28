@@ -29,7 +29,6 @@ Distribución de Clases de Peligrosidad**:
 
 
 ###  Actualización del Dataset (`dataset_edificaciones_e030-v2.csv`)
-**`dataset_edificaciones_e030-v2.csv`** (ya disponible en tu panel de **Studio**), incluyendo **37 columnas** que incorporan cada uno de los parámetros normativos:
 
 #### 1. Amenaza y Sitio
 * **`Zona_Sismica_Z`** / **`Factor_Z`**: Zonas 1 a 4 (\\(0.10g, 0.25g, 0.35g, 0.45g\\)).
