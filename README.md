@@ -1,19 +1,9 @@
 # IA---Grupo-03
-## COMENTARIO IMPORTANTE
-Profesor, buenas noches. Queríamos comentarle que hemos decidido cambiar nuestro tema inicial sobre la selección del tipo de cimentación, debido a que la recopilación y el procesamiento de los datos resultan muy extensos para el tiempo limitado del curso. Por ello, hemos optado por desarrollar un modelo de Machine Learning para la estimación de la demanda sísmica y la clasificación del nivel de peligrosidad estructural de edificaciones. Consideramos que este nuevo enfoque es más viable para cumplir con los objetivos y entregables del curso. Agradeceríamos su opinión sobre este cambio. A continuación se detalla:
 ## Objetivo 
-Desarrollar un modelo predictivo basado en algoritmos de Machine Learning para la estimación rápida de la demanda sísmica y la clasificación del nivel de peligrosidad estructural de edificaciones. El modelo empleará como variables de entrada (X) la parametrización de las normativas de diseño sismorresistente (amenaza, zona, sitio) y las características dinámicas intrínsecas de las estructuras, tales como el periodo fundamental y la rigidez aproximada.
-## Descripción del problema de ingeniería estructural 
-La evaluación de la respuesta sísmica de una edificación exige analizar la interacción entre la amenaza sísmica del emplazamiento y las propiedades dinámicas de la estructura. En el Perú, este procedimiento está regulado por la Norma Técnica E.030 de Diseño Sismorresistente del Reglamento Nacional de Edificaciones (RNE), la cual establece los parámetros de zona (Z), perfil de suelo (S), periodos característicos (Tp y Tl) y factores de amplificación.
-Por otro lado, la demanda sísmica que experimentará la estructura (aceleraciones espectrales, fuerzas cortantes y desplazamientos) es altamente dependiente de sus características propias, fundamentalmente su rigidez lateral, distribución de masa y, en consecuencia, su periodo fundamental de vibración. El problema de ingeniería surge ante la necesidad de evaluar el nivel de vulnerabilidad de un portafolio extenso de edificios existentes, o durante la fase de anteproyecto, donde el cálculo detallado de la demanda sísmica para múltiples combinaciones de parámetros normativos y configuraciones geométricas resulta en un proceso iterativo de alto costo computacional y temporal. La falta de correlaciones instantáneas entre la parametrización del código sísmico y la vulnerabilidad del edificio dificulta la identificación temprana de las estructuras con mayor riesgo de daño o colapso.
-## Problema específico que se pretende resolver 
-El problema específico a abordar es la carencia de una herramienta analítica automatizada que permita identificar de manera inmediata qué edificaciones presentan un mayor nivel de peligrosidad ante un evento sísmico, considerando simultáneamente las condiciones del sitio y la rigidez de la estructura.
-La propuesta consiste en implementar algoritmos de aprendizaje supervisado y no supervisado que procesen una base de datos compuesta por información de edificios reales sometidos a diversas condiciones de sitio. El modelo recibirá como parámetros de entrada las variables del código sísmico (zona, tipo de suelo, parámetros de sitio) y los datos geométricos-dinámicos de la estructura (tipo de sistema estructural, alturas, rigidez aproximada). A partir del análisis de estos patrones, la Inteligencia Artificial generará resultados de salida (Y) que indicarán los valores de demanda esperada y clasificarán las edificaciones según su índice de peligrosidad. Esto permitirá a los ingenieros focalizar los análisis detallados y las estrategias de mitigación en aquellos edificios identificados por el algoritmo como los más críticos o vulnerables.
+Este repositorio implementa un marco de Aprendizaje Automático diseñado para predecir demandas sísmicas dinámicas y clasificar la vulnerabilidad estructural en edificaciones de concreto armado, albañilería y estructuras de acero en el Perú. Desarrollado estrictamente bajo la Norma Técnica E.030 de Diseño Sismorresistente del Reglamento Nacional de Edificaciones (RNE), el proyecto une la mecánica computacional con el aprendizaje estadístico.
+Mediante una arquitectura supervisada de dos etapas combinada con descubrimiento no supervisado de dimensionalidad (PCA y K-Means), este modelo evita la alta latencia computacional de los análisis dinámicos no lineales (tiempo-historia o pushover). 
 
-
-Paso a Paso para Ejecutar el Proyecto.: flujo de trabajo en 4 etapas
-
-
+## Paso a Paso para Ejecutar el Proyecto.: flujo de trabajo en 4 etapas
 Paso 1: Generación del Dataset Sintético Paramétrico 
 Paso 2: Análisis Exploratorio y No Supervisado (EDA + PCA + Clustering)
 Paso 3: Entrenamiento Supervisado de Modelos
@@ -22,10 +12,10 @@ Paso 4: Validación de Estabilidad (PCS) y Repositorio
 Dataset Sintético Realizado.
 
 Distribución de Clases de Peligrosidad**:
-	Bajo**: 1,214 casos (48.56%)
-	Medio**: 573 casos (22.92%)
-	Alto**: 524 casos (20.96%)
-	Critico**: 189 casos (7.56%)
+	Bajo**: 1,108 casos (44.32%)
+	Medio**: 575 casos (23.00%)
+	Alto**: 676 casos (27.04%)
+	Critico**: 141 casos (5.64%)
 
 
 ###  Actualización del Dataset (`dataset_edificaciones_e030-v2.csv`)
