@@ -1,4 +1,4 @@
-# PIML E030 (Physics-Informed ML)
+# Desarrollo algorítmico y redescubrimiento físico de la Norma E.030 
 
 ![Build Status](https://img.shields.io/badge/Status-Completed-success)
 ![Framework](https://img.shields.io/badge/Framework-Physics--Informed%20ML-blue)
@@ -9,9 +9,9 @@
 ## 🇪🇸 Versión en Español
 
 ### 1. Resumen Ejecutivo y Visión General
-Este repositorio implementa un **marco de Aprendizaje Automático Físicamente Informado (PIML)** diseñado para predecir vulnerabilidades estructurales en edificaciones de concreto armado, albañilería y acero estructural en el Perú. Desarrollado bajo la **Norma Técnica E.030 (RNE)**, el proyecto une la mecánica computacional empírica con la Inteligencia Artificial Explicable (XAI).
+  El proyecto inició con un enfoque tradicional de Machine Learning Supervisado: proveer a un algoritmo de una tabla de datos sísmicos para que aprendiera a predecir el cortante basal y las derivas. Sin embargo, las rigurosas auditorías académicas revelaron una falencia conceptual crítica: si el dataset es sintético (generado por fórmulas conocidas), la Inteligencia Artificial simplemente 'memoriza' la ecuación. Esto, conocido científicamente como Fuga de Información (Data Leakage), resulta en modelos con 100% de exactitud que carecen de valor científico real, ya que no están prediciendo.
+Ante esta problemática, el equipo de investigación decidió orientar el estudio hacia el Aprendizaje Automático Físicamente Informado (PIML), bajo el paradigma de Veridical Data Science. Este enfoque busca trascender la capacidad predictiva convencional de los modelos de Machine Learning para analizar si, a partir de datos estructurales y sísmicos potencialmente ruidosos, los algoritmos son capaces de identificar relaciones y patrones físicamente coherentes. De este modo, la investigación plantea como interrogante central si un modelo de Machine Learning, sin incorporar de forma explícita las relaciones normativas de la ingeniería sismorresistente, puede inferir y reproducir los patrones fundamentales establecidos por la Norma E.030.
 
-Este repositorio garantiza la **reproducibilidad computacional** (*Sandve et al., 2013*). Todo el pipeline (desde el EDA exploratorio hasta la regresión simbólica) está integrado y es ejecutable en un único Cuaderno Jupyter Maestro (`PIML_E030.ipynb`), demostrando un flujo de trabajo transparente y libre de colinealidades.
 
 ---
 
